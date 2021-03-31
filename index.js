@@ -32,7 +32,7 @@ app.get("/", (req, res) => {
 });
 
 // Tulostetaan kaikki leffat
-var query = {  };
+var query = {title: "Blacksmith Scene", year: 1893 };
 app.get("/leffat", (req, res) => {
   Movie.find(query, function (err, results) {
    if (err) res.send(err);
