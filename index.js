@@ -4,7 +4,8 @@ var app = express();
 var mongoose = require("mongoose");
 const MongoClient = require("mongodb").MongoClient;
 // Luetaan yhteysosoite Herokukn config_varsista
-const uri = process.env.DB_URI;
+//const uri = process.env.DB_URI;
+const uri = "mongodb+srv://dbuser:demopass@cluster0-6tein.mongodb.net/sample_mflix";
  
 // Yhdistetään tietokantaan
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
