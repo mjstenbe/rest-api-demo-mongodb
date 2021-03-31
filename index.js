@@ -31,7 +31,7 @@ app.get("/", (req, res) => {
 });
 
 // Tulostetaan kaikki leffat
-var query = { title: "The Terminator" };
+var query = {  };
 app.get("/leffat", (req, res) => {
   Movie.find(query, function (err, results) {
    if (err) res.send(err);
