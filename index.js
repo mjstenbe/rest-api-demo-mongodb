@@ -34,6 +34,7 @@ app.get("/", (req, res) => {
 var query = { title: "The Terminator" };
 app.get("/leffat", (req, res) => {
   Movie.find(query, function (err, results) {
+   if (err) res.send(err);
     console.log(results);
     res.json(results);
   });
