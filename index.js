@@ -34,7 +34,7 @@ app.get("/", (req, res) => {
 // Tulostetaan kaikki leffat
 var query = {title: /indiana jones/i };
 app.get("/leffat", (req, res) => {
-  Movie.find(query, function (err, results) {
+  await Movie.find(query, function (err, results) {
    if (err) res.send(err);
     console.log("Results: " + results);
     res.json(results);
