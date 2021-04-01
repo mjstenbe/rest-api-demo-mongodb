@@ -36,7 +36,7 @@ var query = {title: /indiana jones/i };
 app.get("/leffat", (req, res) => {
   Movie.find(query, function (err, results) {
    if (err) res.send(err);
-    console.log(results);
+    console.log("Results: " + results);
     res.json(results);
   });
 });
