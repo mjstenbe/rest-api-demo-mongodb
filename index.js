@@ -1,6 +1,8 @@
 // Otetaan express-moduuli käyttöön
 var express = require("express");
 var app = express();
+var cors = require('cors')
+app.use(cors())
 var mongoose = require("mongoose");
 const MongoClient = require("mongodb").MongoClient;
 // Luetaan yhteysosoite Herokukn config_varsista
